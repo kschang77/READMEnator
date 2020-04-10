@@ -1,12 +1,93 @@
-const questions = [
+// we'll need fs, axios, inquirer
+const fs = require("fs");
+const inquirer = require("inquirer")
+const api = require("./utils/api")
+const generateMarkdown = require("./utils/generateMarkdown")
 
-];
+//fields used:
+//-----------
+//title
+//description
+//usage
+//deployURL
+//repoURL
+//-----
+//authorname
+//authorphotoURL
+//authorEmail
+
+async function askQuestions() {
+
+  const questions = [
+    {
+      type: 'input',
+      name: 'title',
+      message: 'Project title? ',
+      default: 'abc'
+    },
+    {
+      type: 'input',
+      name: 'description',
+      message: 'Short description?',
+      default: 'def'
+    },
+    {
+      type: 'input',
+      name: 'usage',
+      message: 'How to use it?',
+      default: 'ghi'
+    },
+    {
+      type: 'input',
+      name: 'deployURL',
+      message: "URL of deployed? ",
+      default: 'https://nowhere.url'
+    },
+    {
+      type: 'input',
+      name: 'repoURL',
+      message: "URL of repo?",
+      default: 'https://github.com/kschang77/READMEnator'
+    }
+  ];
+
+
+  // the remaining fields will be parsed in next module
+  const answers = await inquirer.prompt(questions)
+  console.info('Answers:', answers);
+  return answers
+}
+
+function doProcessing(data) {
+  // get username from repo URL
+  var tempPath = data.repoURL
+  var tempArr = tempPath.split("/")
+  var tempUser = tempArr[3]
+
+  // call api.js to pull relevant stuff from github
+
+  api.getUser(tempUser)
+
+}
 
 function writeToFile(fileName, data) {
 }
 
+//   fs.writeFileSync('shortbio.html', txthtml, (err) => {
+// if (err) throw err;
+//     })
+
 function init() {
 
+  askQuestions().then(function (result) {
+    doProcessing(result);
+  })
+
+
+  // procData = generateMarkdown(data)
+
+
+  // writeToFile("README.md",procData)
 }
 
 init();
