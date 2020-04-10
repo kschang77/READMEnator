@@ -54,7 +54,7 @@ async function askQuestions() {
 
   // the remaining fields will be parsed in next module
   const answers = await inquirer.prompt(questions)
-  console.info('Answers:', answers);
+  // console.info('Answers:', answers);
   return answers
 }
 
@@ -66,8 +66,9 @@ function doProcessing(data) {
 
   // call api.js to pull relevant stuff from github
 
-  api.getUser(tempUser)
-
+  const ans = api.getUser(tempUser)
+  console.info('Ans:', ans)
+  return ans
 }
 
 function writeToFile(fileName, data) {
@@ -80,14 +81,33 @@ function writeToFile(fileName, data) {
 function init() {
 
   askQuestions().then(function (result) {
-    doProcessing(result);
+    var ret = result
+    doProcessing(ret).then(function (ret2) {
+      var ret3 = Object.assign(ret, ret2)
+      // console.info('ret3 in Init', ret3)
+      // two objects merged into
+      // {
+      // title: 'abc',
+      // description: 'def',
+      // usage: 'ghi',
+      // deployURL: 'https://nowhere.url',
+      // repoURL: 'https://github.com/kschang77/READMEnator',
+      // name: 'Kasey K S Chang',
+      // avatar_url: 'https://avatars1.githubusercontent.com/u/15042541?v=4',
+      // email: null
+    }
+
+}
+
+      // procData = generateMarkdown(data)
+
+
+      // writeToFile("README.md",procData)
+    }   });
+
   })
 
 
-  // procData = generateMarkdown(data)
 
-
-  // writeToFile("README.md",procData)
-}
 
 init();
