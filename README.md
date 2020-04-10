@@ -7,6 +7,8 @@
   
 ## Demo
 
+NOTE: default values subject to change. Output filename subject to change. 
+
 ![demo animated gif](x.gif)
 
 
@@ -45,14 +47,16 @@ N/A?
 
 ## Code Snippet
 
+This is the main program. Proper use of async then. yourREADME.md was chosen because I don't want the app to overwrite this README.md, right? 
+
 ```
  askQuestions().then(function (result) {
     var ret = result
     doProcessing(ret).then(function (ret2) {
       var ret3 = Object.assign(ret, ret2)
       var procData = generateMarkdown(ret3)
-      writeToFile("README.md", procData)
-      console.info("README.md has been written to app directory. ")
+      writeToFile("yourREADME.md", procData)
+      console.info("yourREADME.md has been written to app directory. ")
     })
   })
   }
@@ -60,7 +64,7 @@ N/A?
   
 ## Stretch Goals / Future Developement
 
-Can probably make it smarter by reading package.jason files 
+Can probably make it smarter by reading package.json files and fancier input choices, like let user pick from all the repos they have, and so on. Then let them pick a license? Then search for badges, maybe? 
 
 
 ## License
