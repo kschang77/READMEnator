@@ -31,9 +31,9 @@ N/A?
   https://github.com/kschang77/READMEnator
 
 
-## Screenshot(s) / Demo
+## Screenshot(s)
 
-  To be added. 
+  N/A 
 
 
 # Built With
@@ -56,6 +56,7 @@ N/A?
     })
   })
   }
+```
   
 ## Stretch Goals / Future Developement
 
