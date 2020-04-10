@@ -25,7 +25,7 @@ N/A?
 
 ## Deployed Link
 
-  https://kschang77.github.ip/READMEnator
+  https://kschang77.github.io/READMEnator
 
 
 ## Project Repo
