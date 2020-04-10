@@ -4,11 +4,17 @@
 ![Current Open Source License](https://img.shields.io/github/license/kschang77/READMEnator?style=plastic)
 
   A Command-line-interface (CLI) with Node.js to generate a decent README. Not very smart, but it'll do the job, or at least get you started. 
+  
+## Demo
+
+![demo animated gif](x.gif)
+
 
 # Table of Contents
 
-
 ## Installation
+
+N/A?
 
 ## Usage
 
@@ -17,7 +23,7 @@
 
 ## Deployed Link
 
-  https://nowhere.url
+  https://kschang77.github.ip/READMEnator
 
 
 ## Project Repo
@@ -32,15 +38,28 @@
 
 # Built With
 
+* Node.js
+* Axios
+* Inquirer
 
 
 ## Code Snippet
 
-
-
+```
+ askQuestions().then(function (result) {
+    var ret = result
+    doProcessing(ret).then(function (ret2) {
+      var ret3 = Object.assign(ret, ret2)
+      var procData = generateMarkdown(ret3)
+      writeToFile("README.md", procData)
+      console.info("README.md has been written to app directory. ")
+    })
+  })
+  }
+  
 ## Stretch Goals / Future Developement
 
-
+Can probably make it smarter by reading package.jason files 
 
 
 ## License
