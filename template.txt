@@ -1,9 +1,14 @@
 # ${title}
 
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+![Current Open Source License](https://img.shields.io/github/license/${username}/${reponame)?style=plastic)
 
 ${description}
 
+
+# Table of Contents
+
+
+## Installation
 
 ## Usage 
 
@@ -37,25 +42,31 @@ To be added.
 
 
 
-## Questions
 
-${authorname}
+## License
 
-${authorphotoURL}
+copyright (c) ${authorname} 
 
-${authorEmail}
+This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/)
+
 
 ## Contributing
 
 N/A
 
+
 ## Tests
 
 N/A
 
-## License
+## Questions
 
-This project is licensed under the MIT License
+* ${authorname}
+
+* ![Author Photo](${authorphotoURL})
+
+* ${authorEmail}
+
 
 
 ## Acknowledgments

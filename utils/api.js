@@ -15,10 +15,11 @@ const api = {
     ret.name = d.name
     ret.avatar_url = d.avatar_url
     ret.email = d.email
+    ret.username = username
     // console.log(d.name)
     // console.log(d.avatar_url)
     // console.log(d.email)
-    console.info('ret from api', ret)
+    // console.info('ret from api', ret)
     return ret
   }
 };

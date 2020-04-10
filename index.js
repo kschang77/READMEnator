@@ -21,6 +21,12 @@ async function askQuestions() {
   const questions = [
     {
       type: 'input',
+      name: 'repoURL',
+      message: "URL of repo?",
+      default: 'https://github.com/kschang77/READMEnator'
+    },
+    {
+      type: 'input',
       name: 'title',
       message: 'Project title? ',
       default: 'abc'
@@ -42,18 +48,15 @@ async function askQuestions() {
       name: 'deployURL',
       message: "URL of deployed? ",
       default: 'https://nowhere.url'
-    },
-    {
-      type: 'input',
-      name: 'repoURL',
-      message: "URL of repo?",
-      default: 'https://github.com/kschang77/READMEnator'
     }
+
   ];
 
 
   // the remaining fields will be parsed in next module
   const answers = await inquirer.prompt(questions)
+  var x = answers.repoURL.substring(answers.repoURL.lastIndexOf('/') + 1)
+  answers.reponame = x
   // console.info('Answers:', answers);
   return answers
 }
@@ -67,16 +70,16 @@ function doProcessing(data) {
   // call api.js to pull relevant stuff from github
 
   const ans = api.getUser(tempUser)
-  console.info('Ans:', ans)
+  // console.info('Ans:', ans)
   return ans
 }
 
 function writeToFile(fileName, data) {
-}
 
-//   fs.writeFileSync('shortbio.html', txthtml, (err) => {
-// if (err) throw err;
-//     })
+  fs.writeFileSync(fileName, data, (err) => {
+    if (err) throw err;
+  })
+}
 
 function init() {
 
@@ -94,18 +97,24 @@ function init() {
       // repoURL: 'https://github.com/kschang77/READMEnator',
       // name: 'Kasey K S Chang',
       // avatar_url: 'https://avatars1.githubusercontent.com/u/15042541?v=4',
+      //reponame: READMEnator (from URL)
       // email: null
+      // username: kschang77 (from URL)
+      var procData = generateMarkdown(ret3)
+      // console.info("Markdown is:", procData)
+      writeToFile("README.md", procData)
+
     }
 
-}
+
 
       // procData = generateMarkdown(data)
 
 
       // writeToFile("README.md",procData)
-    }   });
-
+    )
   })
+}
 
 
 

@@ -1,13 +1,75 @@
+
 # READMEnator
 
-A good README generator
+![Current Open Source License](https://img.shields.io/github/license/kschang77/READMEnator?style = plastic)
 
-Need to use Github API to pull pix and email (if setup)
+  From a few basic questions, it can generate a decent README.me... maybe. 
 
-API Documentation https://developer.github.com/v3/guides/getting-started/
+# Table of Contents
 
-https://developer.github.com/v3/users/
 
-Then it's a matter of pulling the various bits as templates.
+## Installation
 
-And run it through Markdown generator.
+## Usage
+
+  run it
+
+
+## Deployed Link
+
+  https://nowhere.url
+
+
+## Project Repo
+
+  https://github.com/kschang77/READMEnator
+
+
+## Screenshot(s) / Demo
+
+  To be added. 
+
+
+# Built With
+
+
+
+## Code Snippet
+
+
+
+## Stretch Goals / Future Developement
+
+
+
+
+## License
+
+  copyright(c) Kasey K S Chang
+
+  See(./LICENSE) for current license.
+
+
+## Contributing
+
+N / A
+
+
+## Tests
+
+N / A
+
+## Questions
+
+  * Kasey K S Chang
+
+  * ![Author Photo](https://avatars1.githubusercontent.com/u/15042541?v=4)
+
+  * null
+
+
+
+## Acknowledgments
+
+  * Hat tip to Jerome, Kerwin, Mahi, and the rest of 2020 March UCB Coding Bootcamp Cohort
+    
