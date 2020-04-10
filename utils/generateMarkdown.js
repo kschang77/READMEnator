@@ -2,9 +2,9 @@ function generateMarkdown(data) {
   return `
 # ${data.title}
 
-![Current Open Source License](https://img.shields.io/github/license/${data.username}/${data.reponame}?style = plastic)
+![Current Open Source License](https://img.shields.io/github/license/${data.username}/${data.reponame}?style=plastic)
 
-  ${ data.description}
+  ${data.description}
 
 # Table of Contents
 
@@ -13,17 +13,17 @@ function generateMarkdown(data) {
 
 ## Usage
 
-  ${ data.usage}
+  ${data.usage}
 
 
 ## Deployed Link
 
-  ${ data.deployURL}
+  ${data.deployURL}
 
 
 ## Project Repo
 
-  ${ data.repoURL}
+  ${data.repoURL}
 
 
 ## Screenshot(s) / Demo

@@ -1,9 +1,9 @@
 
 # READMEnator
 
-![Current Open Source License](https://img.shields.io/github/license/kschang77/READMEnator?style = plastic)
+![Current Open Source License](https://img.shields.io/github/license/kschang77/READMEnator?style=plastic)
 
-  From a few basic questions, it can generate a decent README.me... maybe. 
+  blah
 
 # Table of Contents
 
@@ -12,7 +12,7 @@
 
 ## Usage
 
-  run it
+  blahblah
 
 
 ## Deployed Link
