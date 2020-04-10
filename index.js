@@ -104,14 +104,10 @@ function init() {
       // console.info("Markdown is:", procData)
       writeToFile("README.md", procData)
 
+      console.info("README.md has been written to app directory. ")
+
     }
 
-
-
-      // procData = generateMarkdown(data)
-
-
-      // writeToFile("README.md",procData)
     )
   })
 }
